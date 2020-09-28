@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+int main()
+{
+	cout << "碳与二氧化碳反应平衡常数的测定"<<endl;
+	int pex = 101325, p = 102630;
+	double co=0.0,co2=0.0,kex = 0.0,lnkex=0.0;
+	cout << "输入co和co2的值"<<endl;
+	cin >> co >> co2 ;
+	kex = (co * co * p) / (co2 * pex);
+	cout << "平衡常数k为" << "   " << kex << endl;
+
+	lnkex=log(kex);
+	cout <<"lnk为"<<"   "<< lnkex << endl;
+
+	double t = 0.0, ta = 0.0;
+	cout << "输入温度(摄氏度)"<<endl;
+	cin >> t;
+	cout <<"温度的倒数为" <<"   "<< 1 / (t+273.15) << endl;
+
+	system("pause");
+
+}
